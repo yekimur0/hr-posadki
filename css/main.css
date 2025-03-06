@@ -1,0 +1,404 @@
+:root {
+  --font-family: 'Gilroy', sans-serif;
+  --second-family: 'Buyan', sans-serif;
+  --third-family: 'DAMN', sans-serif;
+  --font3: 'Golos', sans-serif;
+  --content-width: 1460px;
+  --container-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --white: #fff;
+  --black: #000;
+  --accent-color: #293e57;
+  --gradient-accent: #0c0c0c
+    radial-gradient(circle at center, rgb(57, 97, 144) 0%, rgb(41, 62, 87) 100%);
+  --gradient-light: linear-gradient(
+      174deg,
+      #c4cbde 0%,
+      #d7d2e2 47%,
+      #e5d8e7 100%
+    ),
+    #fff;
+
+  --kobaltovo-siniy: #1e213d;
+  --chernyy: #171717;
+  --belyy: #fff;
+}
+
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-disable */
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-disable value-keyword-case */
+@font-face {
+  font-family: 'Buyan';
+  src: url('../fonts/Buyan-Bold.woff2') format('woff2'),
+    url('../fonts/Buyan-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Buyan';
+  src: url('../fonts/Buyan-Thin.woff2') format('woff2'),
+    url('Buyan-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Buyan';
+  src: url('../fonts/Buyan-Regular.woff2') format('woff2'),
+    url('../fonts/Buyan-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-medium.woff2') format('woff2'),
+    url('../fonts/gilroy-medium.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-regular.woff2') format('woff2'),
+    url('../fonts/gilroy-regular.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy-bold.woff2') format('woff2'),
+    url('../fonts/gilroy-bold.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DAMN';
+  src: url('../fonts/DAMN-Regular.woff2') format('woff2'),
+    url('../fonts/DAMN-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  scroll-behavior: auto !important;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  font-size: 14px;
+  overflow-x: hidden;
+  background: #fff;
+  background-size: cover;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+.input-reset::-webkit-search-decoration,
+.input-reset::-webkit-search-cancel-button,
+.input-reset::-webkit-search-results-button,
+.input-reset::-webkit-search-results-decoration {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+.btn-default {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+  border-radius: 8px;
+  padding: 10px 37px;
+  background: #0c0c0c
+    radial-gradient(circle at center, rgb(57, 97, 144) 0%, rgb(41, 62, 87) 100%);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+.btn-default span {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.btn-default:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #516f93;
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media (any-hover: hover) {
+  .btn-default:hover:before {
+    width: 100%;
+  }
+}
+
+.btn-default-second {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: #fff;
+  border: none;
+  background: #0c0c0c
+    radial-gradient(circle at center, rgb(57, 97, 144) 0%, rgb(41, 62, 87) 100%);
+  border-bottom: 4.66px solid #516f93;
+  border-radius: 12px;
+  padding: 23px 58px;
+  cursor: pointer;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .btn-default-second {
+    padding: 24px 28px;
+    font-size: 14px;
+  }
+}
+.btn-default-second span {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.btn-default-second:before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background: #516f93;
+  border-radius: 12px;
+  z-index: 1;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media (any-hover: hover) {
+  .btn-default-second:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+svg > * {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .whatsap--link:hover svg path {
+    fill: #fff;
+  }
+  .whatsap--link:hover svg rect {
+    fill: #4ecd31;
+    fill-opacity: 1;
+  }
+}
+
+@media (any-hover: hover) {
+  .telegram--link:hover svg path {
+    fill: #fff;
+  }
+  .telegram--link:hover svg rect {
+    fill: #4da2ea;
+    fill-opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 1420px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.screen-1 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .lside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 105%;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 24px;
+  }
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 28px;
+    color: #293e57;
+    margin: 0;
+    margin-bottom: 34px;
+    flex: 1 1 auto;
+  }
+  .actions {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: auto;
+    a {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 30px;
+      color: #fff;
+      background: #293e57;
+      padding: 20px;
+      max-width: 340px;
+      text-align: center;
+      transition: 0.3s ease;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      @media (max-width: 992px) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
