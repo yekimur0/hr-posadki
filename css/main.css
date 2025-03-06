@@ -365,6 +365,9 @@ svg > * {
     text-transform: uppercase;
     color: #000;
     margin-bottom: 24px;
+    @media(max-width: 640px) {
+      br {display: none;} 
+    }
   }
   p {
     font-family: var(--font-family);
