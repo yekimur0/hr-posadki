@@ -383,6 +383,7 @@ svg > * {
     gap: 20px;
     flex-direction: column;
     margin-top: auto;
+    transform: translateY(-10px);
     a {
       font-family: var(--font-family);
       font-weight: 400;
